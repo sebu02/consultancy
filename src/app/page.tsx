@@ -2,13 +2,13 @@
 
 import { content } from "@/data/content";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import { useRef } from "react";
 import { TrendingUp, Layers, Diamond, Brain, ArrowRight } from "lucide-react";
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } }
 };
 
 const iconMap: any = { TrendingUp, Layers, Diamond, Brain };
